@@ -13,7 +13,10 @@ export const validateUserToken = async (req, res, next) => {
  // const isEnabled = getEnvVariable('AUTH_USER')
   const isEnabled= false
 
-  if (!isEnabled) return next()
+  if (!isEnabled){
+    console.info('authentication disabled')
+    return next()
+  }
 
   if (isPathExempted(req.method, req.path)) return next()
 
