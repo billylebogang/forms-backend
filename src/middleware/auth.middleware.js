@@ -10,7 +10,8 @@ import {logError, logInfo} from "../utils/logger.js";
  */
 export const validateUserToken = async (req, res, next) => {
     console.info('authenticating...')
-  const isEnabled = getEnvVariable('AUTH_USER')
+ // const isEnabled = getEnvVariable('AUTH_USER')
+  const isEnabled= false
 
   if (!isEnabled) return next()
 
