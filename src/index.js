@@ -10,7 +10,7 @@ import {logInfo} from "./utils/logger.js";
 
 dotenv.config()
 app.use(express.json()) // Parse JSON request bodies
-app.use(cors({origin: ['*', 'http://localhost:3000']}))
+app.use(cors({origin: ['*', 'http://localhost:3000','http://10.1.31.250', "http://10.1.31.250:80" ]}))
 app.use(validateUserToken)
 
 //test route
